@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import colorama
 from colorama import Fore,Style
 from textblob import TextBlob
@@ -56,4 +57,39 @@ while True:
         print(f"{Fore.CYAN}🗞️ Conversation History cleared!{Style.RESET_ALL}")
     elif user_input.lower() == "history":
         if not conversation_history:
+=======
+import colorama
+from colorama import Fore,Style
+from textblob import TextBlob
+
+
+colorama.init()
+
+
+print(f"{Fore.CYAN}🥳🥳 Welcome to Sentiment Spy! 🕵️{Style.RESET_ALL}")
+user_name = input (f"{Fore.MAGENTA} Please enter your name:{Style.RESET_ALL} ").strip()
+if not user_name:
+    user_name = "Mystery Agent" 
+    
+conversation_history = []
+
+print(f"\n{Fore.CYAN}Hello, Agent {user_name}!")
+print(f"Type a sentence and I will analyze your scenteces using textblob and show you the sentiment")
+print(f"Type {Fore.YELLOW}-'reset'{Fore.CYAN}, {Fore.YELLOW}-'history'{Fore.CYAN},"
+     f"or {Fore.YELLOW}-'exit'{Fore.CYAN} to quit.{Style.RESET_ALL}\n")
+while True:
+    user_input = input(f"{Fore.GREEN}>> {Style.RESET_ALL}").strip()
+    if not user_input:
+        print(f"{Fore.RED}Please enter text or  valid command")
+        continue
+    
+    
+    if user_input.lower() == "exit":
+        print (f"\n{Fore.BLUE}   Exiting Sendiment Spy. Farewell, Agent {user_name}!  {Style.RESET_ALL}")
+    elif user_input.lower() == "reset":
+        conversation_history.clear()
+        print(f"{Fore.CYAN}🗞️ Conversation History cleared!{Style.RESET_ALL}")
+    elif user_input.lower() == "history":
+        if not conversation_history:
+>>>>>>> 83d8e4af2f85e118c1db744d47b0ea33ae7a9cd0
             print(f"{Fore.YELLOW}No conversation history yet.{Style.RESET_ALL}")
