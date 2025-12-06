@@ -42,4 +42,47 @@ def recommend():
         print(Fore.RED + "TravelBot: Sorry, I don't have that kind of destination")
     
     show_help()
+    
+def packing_tips():
+    
+    print(Fore.CYAN + "TravelBot: Where to?")
+    location = normalise_input(input(Fore.YELLOW + "You: "))
+    print(Fore.CYAN + "TravelBot: How many days?")
+    days = input(Fore.YELLOW + "You: ")
+    
+    print(Fore.GREEN + f"TravelBot: Packing tips for {days} days in {location}:")
+    
+    if location == "Canada":
+        print(Fore.GREEN + "-Pack summer & winter clothes.")
+        print(Fore.GREEN + "-Bring chargers/adapters.")
+        print(Fore.GREEN + "-Check the weather forecast.")
+    elif location == "Cuba" or "Florida":
+        print(Fore.GREEN + "-Pack summer clothes.")
+        print(Fore.GREEN + "-Bring chargers/adapters.")
+        print(Fore.GREEN + "-Check the weather forecsat.")
+    else:
+        print(Fore.GREEN + "-Pack versatile clothes.")
+        print(Fore.GREEN + "-Bring chargers/adapters.")
+        print(Fore.GREEN + "-Check the weather forecast.")
+        
+def tell_joke():
+    print(Fore.YELLOW + f"TravelBot: {random.choice(jokes)}")
+    
+def show_help():
+    print(Fore.MAGENTA + "\nIcan:")
+    print(Fore.GREEN + "-Suggest travel spots (say 'recommendation')")
+    print(Fore.GREEN + "-Offer packing tips (say 'packing')")
+    print(Fore.GREEN + "-Tell a joke (say 'joke')")
+    print(Fore.CYAN + "Type 'exit' or 'bye' to end.\n")
+    
+    
+def chat():
+    print(Fore.CYAN + "Hello! I'm TravelBot.")
+    name = input(Fore.YELLOW + "Your name? ")
+    print(Fore.GREEN + f"Nice to meet you, {name}!")
+    
+    show_help()
+    while True:
+        user_input = input(Fore.YELLOW + f"{name}")
+        
         
