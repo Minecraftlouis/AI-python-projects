@@ -41,9 +41,31 @@ def analyze_sentiment(text):
         
         sentiment = blob.sentiment.polarity
         
-        conversation_history.append
-    
+        conversation_history.append(text)
+        
+        if sentiment > 0.75:
+            positive_count += 1
+            return f"\n{Fore.GREEN}🌟 Very Positive sentiment detected, Agent {user_name}! (Score: {sentiment:.2f})"
+        
+        elif 0.25 < sentiment <= 0.75:
+            positive_count += 1
+            return f"\n{Fore.GREEN}😊 Positive sendiment detected, Agent {user_name}! (Score: {sentiment:.2f})"
+        
+        elif -0.25 <= sentiment <= 0.25:
+            neutral_count +=1
+            return f"\n {Fore.YELLOW}😐 Neutral sentiment detected"
+        
+        elif -0.75 <= sentiment < -0.25:
+            negative_count += 1  # Increment negative counter
+            return f"\n{Fore.RED}💔 Negative sentiment detected, Agent {user_name}. (Score: {sentiment:.2f})"
+        else:
+            negative_count += 1  # Increment negative counter
+            return f"\n{Fore.RED}💔 Very Negative sentiment detected, Agent {user_name}. (Score: {sentiment:.2f})"
 
+    except Exception as e:
+                  return f"{Fore.RED}An error occurred during sentiment analysis: {str(e)}"
+       
+        
 print(f"\n{Fore.CYAN}Hello, Agent {user_name}!")
 print(f"Type a sentence and I will analyze your scenteces using textblob and show you the sentiment")
 print(f"Type {Fore.YELLOW}-'reset'{Fore.CYAN}, {Fore.YELLOW}-'history'{Fore.CYAN},"
