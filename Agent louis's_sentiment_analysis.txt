@@ -1,0 +1,8 @@
+Sentiment Analysis Report for Agent louis
+Positive Sendiments: 1
+Negative Sentiments: 0
+Neutral Sentiments Detected: 1
+
+Conversation History:
+1. I'm excited
+2. & C:/Users/LOUIS/AppData/Local/Programs/Python/Python313/python.exe "c:/Users/LOUIS/OneDrive/Desktop/AI python projects/a1.py"

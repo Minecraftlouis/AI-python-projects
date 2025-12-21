@@ -6,7 +6,7 @@ from colorama import init, Fore
 import time
 import sys
 
-
+nonlocal
 init(autoreset=True)
 
 

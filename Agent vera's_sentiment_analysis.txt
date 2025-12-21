@@ -1,0 +1,10 @@
+Sentiment Analysis Report for Agent vera
+Positive Sendiments: 1
+Negative Sentiments: 1
+Neutral Sentiments Detected: 2
+
+Conversation History:
+1. today i feel sorry about my self
+2. i love my son only
+3. i miss my parents
+4. i love my son
