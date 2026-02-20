@@ -27,4 +27,11 @@ cv2.circle(image_rgb, (center2_x, center2_y), 15, (0, 255, 0), -1)
 
 cv2.line(image_rgb, (center1_x, center1_y), (center2_x, center2_y), (0, 0, 255), 3)
 font = cv2.FONT_HERSHEY_SIMPLEX
-cv2.putText(image_rgb, 'Region 1', (top_left1[0], top_left1[1] - 10), font, 0.7, (255, 255, 255), 2)
+cv2.putText(image_rgb, 'Region 1', (top_left1[0], top_left1[1] - 10), font, 0.7, (255, 255, 255), 2, cv2.LINE_AA)
+cv2.putText(image_rgb, 'Region 2', (top_left2[0], top_left2[1] - 10), font, 0.7, (255, 255, 255), 2, cv2.LINE_AA)
+cv2.putText(image_rgb, 'Center 1', (center1_x - 40, center1_y + 40), font, 0.6, (0, 255, 0), 2, cv2.LINE_AA)
+cv2.putText(image_rgb, 'Center 2', (center2_x - 40, center2_y + 40), font, 0.6, (255, 0, 0), 2, cv2.LINE_AA)
+
+
+
+cv2.arrowedLine(image_rgb, arrow_start, arrow_end, (255,255,0),3, tipLength=0.05)
